@@ -130,7 +130,6 @@ type
     function  PrepareReport(AMDFe: TMDFe = nil): Boolean;
     function  PrepareReportEvento: Boolean;
     procedure CriarDataSetsFrx;
-    procedure frxReportBeforePrint(Sender: TfrxReportComponent);
     procedure AjustaMargensReports;
   public
     frxReport: TfrxReport;
@@ -150,6 +149,7 @@ type
     procedure LimpaDados;
     procedure CarregaDadosEventos;
     procedure SetDataSetsToFrxReport;
+    procedure frxReportBeforePrint(Sender: TfrxReportComponent);
     procedure frxReportGetValue(const VarName: string; var Value: Variant);
 
     property MDFe            : TMDFe read FMDFe write FMDFe;
